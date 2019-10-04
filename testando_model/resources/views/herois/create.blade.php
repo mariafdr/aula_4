@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">Inserir um Heroi</div>
                 <div class="card-body">
-                   <form action="/herois" method="POST">
+                   <form action="/herois" method="POST" enctype="multipart/form-data">
                    @csrf
                         <table>
                             <tr>

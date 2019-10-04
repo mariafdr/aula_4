@@ -18,6 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
 Route::match(['get', 'post'], '/herois', 'HeroiController@index');
 Route::view('/herois/create', 'herois.create');
+Route::get('/herois/info/{id}', 'HeroiController@info')->name('info');
+Route::view('/herois/info', 'herois.info');
+Route::view('/herois/index', 'herois.index');
